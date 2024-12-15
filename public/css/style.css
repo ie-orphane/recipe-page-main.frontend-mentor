@@ -103,9 +103,12 @@ main {
     background-color: var(--white);
     border-radius: 1.75rem;
     padding: 2.5rem 2.75rem;
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
+
+    #container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
 }
 
 [alt="omelette"] {
@@ -176,10 +179,48 @@ main {
 footer#attribution {
     font-size: 12px;
     text-align: center;
-    padding-top: 3.25rem ;
+    padding-top: 3.25rem;
 
     a {
         text-decoration: none;
         color: var(--violet);
+    }
+}
+
+@media (min-width: 426px) and (max-width: 769px) {
+    body {
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+    }
+
+    main {
+        width: 75vw;
+    }
+}
+
+@media (max-width: 426px) {
+    body {
+        padding: 0;
+        padding-bottom: 1.25rem;
+        background-color: var(--white);
+    }
+
+    main {
+        width: 100vw;
+        border-radius: 0;
+        padding: 0;
+
+
+        #container {
+            padding: 1.25rem 1.75rem;
+        }
+    }
+
+    [alt="omelette"] {
+        border-radius: 0;
+    }
+
+    footer#attribution {
+        padding-top: 0;
     }
 }
